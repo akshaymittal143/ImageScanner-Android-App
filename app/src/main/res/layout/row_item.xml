@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_margin="20dp"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/documentThumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" 
+            android:layout_alignParentTop="true"  android:padding="10dp"
+            android:src="@drawable/empty_document" />
+
+      
+
+        <TextView
+            android:id="@+id/documentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/documentThumbnail"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <TextView
+            android:id="@+id/modifiedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/documentName"
+            android:layout_toRightOf="@+id/documentThumbnail"
+            android:text="date"
+            android:textStyle="italic" />
+		 <TextView
+            android:id="@+id/pageFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modifiedDate"
+            android:layout_toRightOf="@+id/documentThumbnail"
+            android:text="TextView" />
+
+
+        
+    </RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/custom_theme_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/documentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:lines="1"
+            android:text="Document20130822123456"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <EditText
+            android:id="@+id/renameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:ems="10" android:visibility="gone"
+            android:imeOptions="actionGo"
+            android:selectAllOnFocus="true"
+            android:text="Document20130822123456"
+            android:textColorHighlight="@android:color/darker_gray" >
+
+            <requestFocus>
+            </requestFocus>
+        </EditText>
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_above="@+id/navBar"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:weightSum="4"
+        android:layout_alignParentBottom="true" android:id="@+id/navBar"
+        android:background="@color/custom_theme_color" >
+
+        <ImageView
+            android:id="@+id/cameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/galleryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+
+
+        <ImageView
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_share" />
+
+
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_delete" />
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/displayProgress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+</RelativeLayout>
